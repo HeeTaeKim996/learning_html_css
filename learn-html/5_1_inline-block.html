@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline Block 1</title>
+    <style>
+      div {
+        background-color: red;
+      }
+      span {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      div 텍스트 입니다. 컨텐츠(wrapt_content와 유사) 가 아닌<br />
+      div 기준인 (match_parent 와 유사) 블록 영역이 잡힙니다
+    </div>
+
+    <span>
+      span 텍스트 입니다. 컨텐츠(wrap_content와 유사)인 인라인 영역으로 기준이
+      잡히기에,<br />
+      span 자체의 영역(match_parent와 유사) 로 영역이 잡히지 않습니다.
+    </span>
+  </body>
+</html>
