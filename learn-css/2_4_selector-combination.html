@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select Combination</title>
+    <style>
+      /* 자손결합자 : A B (A의 자손(손자, 증손자 등 포함) 중 B인 요소를 선택) */
+      section [class='first'] {
+        color: red;
+      }
+
+      /* 직계자손결합자 : A > B (A의 직계 자손 중 B인 요소를 선택) */
+      section > ul > li > [class='second'] {
+        color: blue;
+      }
+
+      /* 일반형제결합자 : A ~ B(A이후에 나오는 A의 모든 형제(동일 탭길이) B 선택 )  */
+      p ~ span {
+        color: red;
+      }
+
+      /* 일반 형제 결합자 : A + B(A 이후에 인접해 나오는 B 만 선택) */
+      p + code {
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>제목</h1>
+      <hr />
+      <p>첫문단입니다</p>
+      <ul>
+        <li><span class="first">첫째</span> 요소입니다</li>
+        <li><span class="second">둘째</span> 요소입니다</li>
+        <li><span class="third">셋째</span> 요소입니다</li>
+      </ul>
+    </section>
+
+    <hr />
+    <section>
+      <p>저(P)를 기준으로 형제를 잡지만, 저는 대상이 아닙니다</p>
+      <code>CODE BROWN.</code> <br />
+      <code>대상 X</code> <br />
+      <span>SPAN RED</span> <br />
+      <span>SPAN RED</span> <br />
+    </section>
+  </body>
+</html>

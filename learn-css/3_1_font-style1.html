@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font Style</title>
+    <style>
+      .first {
+        font-family: serif, monosapce;
+        /* font-family(글꼴변경) : 첫번째로 serif시도후, 없다면 monospace */
+        font-size: 28px;
+      }
+
+      /* google fonts 검색 후 폰트 선택후 사용하기 중 @import로 들어가면, 코드가 나온다.
+         해당 코드를 아래처럼 @import 문부터 복사해서 붙여넣는다. */
+      @import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+      .second {
+        font-family: 'Dongle', sans-serif;
+        /* import 후, google-fonts 사이트에서 텍스트 코드로 알려준대로, 위처럼 사용한다 */
+
+        font-style: italic;
+        /* font-style (글자 스타일 변경) */
+      }
+      .third {
+        font-weight: bold;
+      }
+      .fourth {
+        font-weight: 1000; /* 이렇게 bold 말고 숫자로도 할당 가능 */
+      }
+      [class='6'] {
+        font-variant: small-caps; /* small-caps : 소문자를 대문자로 변경 */
+      }
+      .p1 {
+        font-size: 2rem; /* [n]rem : 최상위 요소의 글자 크기의 [n]배 */
+      }
+      .p2Parent {
+        font-size: 28px; /* px : 고정값 */
+      }
+      .p2 {
+        font-size: 2em;
+        /* [n]em : 직계 부모 기준으로 글자 크기의 [n]배 */
+      }
+      .rec1 {
+        width: 30vw; /* vw : 전체 화면 가로 기준의 퍼센티지 (30%) */
+        height: 100px;
+        background-color: yellow;
+      }
+      .rec2 {
+        width: 60vw;
+        height: 20vh; /* vh : 전체 화면 세로 기준 퍼센티지 (20%) */
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="first">첫째줄입니다</p>
+    <p class="second">둘째줄입니다</p>
+    <p class="third">셋째줄입니다</p>
+    <p class="fourth">넷째줄입니다</p>
+    <p class="6">Hi Harry</p>
+    <hr />
+    <h2>px</h2>
+    <p class="p1">첫째줄입니다</p>
+    <div class="p2Parent">
+      <p class="p2">둘째줄입니다</p>
+    </div>
+    <p class="p3">셋째줄입니다</p>
+    <hr />
+    <div class="rec1"></div>
+    <div class="rec2"></div>
+  </body>
+</html>
