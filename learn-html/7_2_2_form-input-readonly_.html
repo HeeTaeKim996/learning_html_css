@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>속성 설명</legend>
+        <ul>
+          <li>
+            <label for="Testing_readonly">TestingReadOnly</label>
+            <input
+              type="text"
+              id="Testing_readonly"
+              value="사전에 입력된 값"
+              readonly
+            />
+            <!-- readonly : 입력 불가-->
+          </li>
+          <li>
+            <label for="Testing_disabled">TestingDisabled</label>
+            <input
+              type="text"
+              id="Testing_disabled"
+              value="비활성화됨"
+              disabled
+            />
+            <!-- disabled : 입력도 불가하고, 서버에 데이터를 전송하지도 않음-->
+          </li>
+          <li>
+            <label for="Testing_autofocus">TestingAutoFocus></label>
+            <input
+              type="text"
+              id="Testing_autofocus"
+              value="자동으로 여기로 포커스"
+              autofocus
+            />
+            <!-- autofocus == requireFocus-->
+          </li>
+          <li>
+            <label for="Testing_placeholder">TestingPlaceHolder</label>
+            <input
+              type="text"
+              id="Testing_placeholder"
+              placeholder="설명문구"
+            />
+            <!-- placeholder : 값이 아닌 설명문구 입력-->
+          </li>
+          <li>
+            <label for"Testing_required">TestingRequired</label>
+            <input type="text" id="Testing_required" required/>
+            <!-- required : 서버에 전송 때 공란이면 안됨 -->
+          </li>
+        </ul>
+        <input type="submit" value="제출하기"/>
+      </fieldset>
+    </form>
+  </body>
+</html>

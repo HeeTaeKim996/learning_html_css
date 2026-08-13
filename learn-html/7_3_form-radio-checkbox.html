@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radio&Checkbox</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>체크박스 테스트</legend>
+        <ul>
+          <li>
+            <label for="checking">체크</label>
+            <input type="checkbox" id="checking" value="checked" />
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>라디오 테스트</legend>
+        <ul>
+          <li>
+            <label for="red">빨강</label>
+            <input type="radio" name="color" id="red" value="red" />
+          </li>
+          <li>
+            <label for="blue">파랑</label>
+            <input type="radio" name="color" id="blue" value="blue" />
+          </li>
+          <li>
+            <label for="green">초록</label>
+            <input type="radio" name="color" id="green" value="green" />
+          </li>
+          <!-- name 이 같아야 동일한 라디오 그룹으로 인식됨-->
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>TextArea 예시</legend>
+        <textarea name="" cols="30" rows="10">기본값입니다.</textarea>
+        <!-- 여러 줄로 입력할 수 있는 텍스트 입력창-->
+      </fieldset>
+      <fieldset>
+        <legend>Select 예시</legend>
+        <ul>
+          <li>
+            <select name="goods" id="goods">
+              <option value="apple_10kg">사과 10kg</option>
+              <option value="apple_20kg">사과 20kg</option>
+              <option value="apple_30kg" selected>사과 30kg</option>
+              <!-- selected : 디펄트로 선택-->
+            </select>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Select mutliple 예시</legend>
+        <ul>
+          <li>
+            <select name="goods" id="goods" multiple>
+              <option value="apple_10kg">사과 10kg</option>
+              <option value="apple_20kg">사과 20kg</option>
+              <option value="apple_30kg">사과 30kg</option>
+              <!-- multiple : 다중 선택 가능 (shift 또는 Ctrl 로)-->
+            </select>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>datalist 예시</legend>
+        <input
+          list="ice_cream_flavors"
+          id="ice_cream_choice"
+          name="ice_cream"
+        />
+        <datalist id="ice_cream_flavors">
+          <option value="chocolette">
+          <option value="mint"
+        </datalist>
+        <!-- datalist : 사용자가 직접 입력할 수 있으면서도, 이미 예약된 값들도 할당 가능-->
+      </fieldset>
+            <button type="submit">제출하기</button>
+            <!-- submit : form action = "~" 의 ~ url로 데이터 전송. 
+             (type 미지정시, 디펄트 submit)            -->
+             <button type="reset">리셋하기</button>
+            <!-- reset : 기본값으로 모든 데이터를 초기화-->
+             <button type="button" onclick="alert('hi')">버튼</button>
+             <!--button : onclick 등에 커스텀 함수 붙이는 용도-->
+    </form>
+  </body>
+</html>
