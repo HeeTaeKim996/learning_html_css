@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .border {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+      }
+      .b1 {
+        border: 1px solid black;
+      }
+      .b2 {
+        border-top: 3px dotted red;
+        border-bottom: 3px dashed blue;
+        border-left: 3px solid brown;
+        border-right: 3px solid cyan;
+      }
+      .b3 {
+        border: 1px solid black;
+        border-radius: 20%; /* %가 늘어남에따라, 원에 근사, 줄어듬에 따라, 사각형에 근사 */
+      }
+      .sb {
+        padding: 20px;
+        border: 3px solid red;
+      }
+      .b4 {
+        box-sizing: content-box;
+        /* content-box : 정의한 width, hegith 가 content 크기를 정의 (content - padding - border 중) */
+      }
+      .b5 {
+        box-sizing: border-box;
+        /* border-box : 정의한 width, height 가 (content - padding - border)를 모두 포함하여 크기를 정의
+           ※ HTML 의 크기를 정확히 지정하려면, border-box 를 사용해야 함 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="border b1"></div>
+    <div class="border b2"></div>
+    <div class="border b3"></div>
+    <div class="border sb b4"></div>
+    <div class="border sb b5"></div>
+  </body>
+</html>
