@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .content {
+        border: 1px solid blue;
+      }
+      .p1 {
+        text-align: center;
+      }
+      .p2 {
+        text-align: left;
+      }
+      .p3 {
+        text-align: right;
+      }
+      .p4 {
+        line-height: 5rem; /* 글자 높이 */
+        letter-spacing: 3px; /* 자간 */
+        word-spacing: 30px; /* 단어와 단어 사이의 공백(개별 글자 말고. 글자의 집합인 단어 간 공백) */
+        text-indent: 80px; /* 들여쓰기 */
+      }
+      .p5 {
+        text-transform: uppercase;
+      }
+      .p6 {
+        text-transform: lowercase;
+      }
+      .p7 > a {
+        text-decoration: line-through;
+      }
+      .p7 #line {
+        text-shadow: 2px 2px 3px black;
+        /* (1) : x축 이동. (2) : y축 이동 (3) : 점도(높을 수록 번져보임)*/
+      }
+      ul {
+        list-style: circle;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <p class="content p1">1줄입니다</p>
+      <p class="content p2">2줄입니다</p>
+      <p class="content p3">3줄입니다</p>
+      <p class="content p4">4줄 입니다</p>
+      <p class="content p5">This Is Fifth Line</p>
+      <p class="content p6">This Is Sixth Line</p>
+      <p class="content p7">This is <a>Seventh</a> <a id="line">Line</a></p>
+    </section>
+
+    <hr />
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </body>
+</html>

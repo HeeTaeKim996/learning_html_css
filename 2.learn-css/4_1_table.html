@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #tb {
+        border-collapse: collapse; /* 테이블간 경계선이 겹쳐서 나오게(한줄로 나오게) */
+        width: 80%;
+      }
+      #tb th,
+      #tb td {
+        border: 1px solid #000000;
+      }
+      #tb th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        background-color: green;
+        color: white;
+      }
+      #tb td {
+        text-align: left;
+      }
+      #tb tr:hover {
+        /* hover : 마우스가 위에 올라갔을 때 */
+        background-color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="tb">
+      <tr>
+        <th>c1</th>
+        <th>c2</th>
+        <th>c3</th>
+      </tr>
+      <tr>
+        <td>c1_1</td>
+        <td>c2_1</td>
+        <td>c3_1</td>
+      </tr>
+      <tr>
+        <td>c1_2</td>
+        <td>c2_2</td>
+        <td>c3_2</td>
+      </tr>
+    </table>
+  </body>
+</html>
