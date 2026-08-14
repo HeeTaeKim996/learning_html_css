@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position</title>
+    <style>
+      main,
+      section,
+      article,
+      div {
+        border: 1px solid brown;
+        padding: 20px;
+      }
+      main {
+        max-width: 600px;
+        margin: 0 auto; /* auto 로 하기에, 좌 우가 균일 정렬되어, 가운데로 맞춰짐 */
+        background-color: yellow;
+      }
+      section {
+        background-color: violet;
+        position: relative;
+      }
+      article {
+        background-color: cyan;
+      }
+      div {
+        background-color: white;
+      }
+      div.static {
+        top: 10px;
+        /* static : position 의 디펄트는 static. top, left.. 등을 지정한다 해도, 이동하지 않음 */
+      }
+      div.relative {
+        position: relative;
+        top: 10px;
+        left: 30px;
+        /* relative : constraint_top_toTopOff.. 등 constarint.. 와 유사한듯 */
+
+        z-index: 1;
+        /* z-index : 어느 객체가 앞, 뒤에 나올지를 결정. 기본은 0. 
+           ※ z-index 는 position이 (relative, absolute, fixed)인 경우에 한하여 작동 */
+      }
+      div.absolute {
+        position: absolute;
+        background-color: coral;
+        top: 120px;
+        left: 190px;
+        /* absolute : position.staic 의 요소들과는 무관하게 독립적으로 배치됨. 부모 중 position.static 속성을 가지고 있지
+                      않은, 가장 가까운 부모를 기준으로, 포지션이 지정됨
+                      (이 예에서는 section 이 relative로 설정됐기에, section을 기준으로 위치를 잡음)*/
+      }
+      div.fixed {
+        position: fixed;
+        background-color: blue;
+        bottom: 10vh;
+        right: 10vw;
+        /* fixed : viewport를 기준으로 위치가 결정됨. 스크롤을 해도 viewport 기준이기에, 위치 변동 없음*/
+      }
+      div.sticky {
+        position: sticky;
+        top: 10px;
+        /* 화면에 포함될 시 static과 동일하게 작동하지만, (top, bottom, right, left) 등에서 지정한 임계점을 
+           넘을시, fixed 처럼 viewport를 기준으로 위치가 고정됨
+           이 예시에서는 아래로 스크롤을 하면, fixed처럼 변함 */
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      main
+      <section>
+        section
+        <article>
+          article
+          <div class="static">static</div>
+          <div class="relative">relative</div>
+          <div class="absolute">absolute</div>
+          <div class="fixed">fixed</div>
+          <div class="sticky">sticky</div>
+          <div style="height: 1000px; background-color: gray"></div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
