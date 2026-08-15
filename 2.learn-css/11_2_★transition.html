@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* setting */
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .box,
+      .container {
+        width: 60px;
+        height: 60px;
+      }
+      .container {
+        margin: 0 auto;
+        border: 3px solid red;
+        margin-top: 10px;
+      }
+      .box {
+        background-color: blue;
+      }
+
+      /* transition 실습 */
+      .box {
+        /* transition : 천천히 transform이 변하도록 함 */
+        transition-property: width, height, background-color, transform;
+        /* width, height, background-color, transform 가 transition 
+          ※ 전부 다 transition처리하고 싶으면 'all' 하면 됨 */
+        transition-duration: 0.3s; /* 변하는 속도 */
+        transition-delay: 0.1s; /* 변하기전 딜레이 */
+      }
+      .box:hover {
+        /* 마우스가 올려질시, width, height 를 아래처럼 변하게함. (위 transition에 따라 천천히 변함) */
+        width: 120px;
+        height: 120px;
+      }
+      .b2 {
+        transition-timing-function: ease-in; /* 천천히 시작했다 마지막에 빨라짐 */
+      }
+      .b3 {
+        transition-timing-function: ease-out; /* 빠르게 시작했다 마지막에 느려짐 */
+      }
+      .b4:hover {
+        background-color: red;
+        /* 색상도 스무스하게 변함 */
+      }
+      .b5:hover {
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box b1"></div>
+    </div>
+    <div class="container">
+      <div class="box b2"></div>
+    </div>
+    <div class="container">
+      <div class="box b3"></div>
+    </div>
+    <div class="container">
+      <div class="box b4"></div>
+    </div>
+    <div class="container">
+      <div class="box b5"></div>
+    </div>
+  </body>
+</html>

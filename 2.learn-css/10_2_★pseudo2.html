@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .rq1::before {
+        /* : before - 해당하는 컨텐츠 앞에, 요소를 자식으로 생성*/
+        content: '*';
+        margin-right: 2px;
+        font-size: 18px;
+        color: red;
+      }
+      .rq2::after {
+        /* after - 마찬가지로 자식으로 after로 생성됨 */
+        content: '/';
+        margin-left: 2px;
+        font-size: 18px;
+        color: blue;
+      }
+      [data-tooltip] {
+        /* data-tooltip 은 이미 만들어진 속성이 아니라, 아래 정의된 사용자 속성 */
+        font-size: 15px;
+      }
+      [data-tooltip]::after {
+        content: attr(data-tooltip);
+        /* - attr(..) 로 ..속성의 내용을 가져온다. */
+      }
+      [dt2] {
+        position: relative;
+        font-size: 20px;
+      }
+      [dt2]:hover::after {
+        /* hover 와 after 를 혼용하여, 마우스가 올라가 있을 때, 아래 정의한 내용이 화면에 보임 */
+        content: attr(dt2);
+        position: absolute; /* position:static 이 아닌 가장 가까운 부모(여기선 dt2)를 기준으로 위치 지정 */
+        top: 0px;
+        left: 60px;
+        background-color: black;
+        color: white;
+        width: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="rq1">Testing before</p>
+    <p class="rq2">Testing After</p>
+    <fieldset>
+      <button data-tooltip="after활용 예시입니다">_</button><br />
+      <button dt2="이건 hover때만 보일 겁니다">클릭</button>
+    </fieldset>
+  </body>
+</html>
