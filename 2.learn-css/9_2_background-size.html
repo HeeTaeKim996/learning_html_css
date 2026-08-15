@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .bg {
+        background-image: url('/assets/images/background.jpg');
+        border: 1px solid black;
+        width: 300px;
+        height: 300px;
+      }
+      .b1 {
+        /* 디펄트로 반복 */
+      }
+      .b2 {
+        background-size: contain;
+        /* 이미지가 잘리거나 부족하지 않게, 확대/추소. (가로-세로의 비율은 유지됨) */
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .b3 {
+        background-size: cover;
+        /* 박스 영역을 완전히 채우도록 확대/추소(일부 이미지가 잘릴 수 있음)(가로-세로 비율은 유지됨) */
+        /* ※ cover 가 가장 자주 사용됨 */
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg b1"></div>
+    <div class="bg b2"></div>
+    <div class="bg b3"></div>
+  </body>
+</html>

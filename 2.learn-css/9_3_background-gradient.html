@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .lg {
+        width: 500px;
+        height: 200px;
+        border: 1px solid black;
+      }
+      .lg1 {
+        background: linear-gradient(red, blue);
+      }
+      .lg2 {
+        background: linear-gradient(to right, red, blue);
+      }
+      .lg3 {
+        background: linear-gradient(to top, red, blue);
+      }
+      .lg4 {
+        background: linear-gradient(to top right, red, blue);
+      }
+      .lg5 {
+        background: linear-gradient(-45deg, red, blue);
+      }
+      .lg6 {
+        background: linear-gradient(to right, red, green, blue);
+      }
+      .lg7 {
+        background: linear-gradient(to right, red 50%, green 80%, blue 100%);
+      }
+      .rg {
+        width: 500px;
+        height: 200px;
+        border: 1px solid black;
+      }
+      .rg1 {
+        background: radial-gradient(white, yellow);
+      }
+      .rg2 {
+        background: radial-gradient(white, yellow, red);
+      }
+      .rg3 {
+        background: radial-gradient(circle at 10% 50%, white, yellow, red);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lg lg1"></div>
+    <div class="lg lg2"></div>
+    <div class="lg lg3"></div>
+    <div class="lg lg4"></div>
+    <div class="lg lg5"></div>
+    <div class="lg lg6"></div>
+    <div class="lg lg7"></div>
+    <hr />
+    <h2>구분용도</h2>
+    <hr />
+    <div class="rg rg1"></div>
+    <div class="rg rg2"></div>
+    <div class="rg rg3"></div>
+  </body>
+</html>

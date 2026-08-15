@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        font-size: 30px;
+      }
+      a:link {
+        /* link : 아직 링크를 방문하지 않았을 때 */
+        color: cyan;
+      }
+      a:visited {
+        /* visited : 링크를 이미 방문했을 때 */
+        color: brown;
+      }
+      a:hover {
+        /* hover : 마우스가 올라가 있을 때 */
+        font-weight: 900;
+      }
+      a:active {
+        /* 조건이 클래스별로 다른데, a인 경우 클릭하고 있는 상태가 active */
+        color: red;
+      }
+      .field {
+        margin-bottom: 10px;
+      }
+      input:focus {
+        /* input에 포커스가 간 상태일 때 */
+        outline: none;
+        border: 3px solid red;
+        box-shadow: 0 0 20px #dd7777;
+      }
+      li:nth-child(2) {
+        /* nth-child(n) : li 의 n번째 요소를 선택 (0이 아닌 1부터 시작) */
+        background-color: #ff000033;
+      }
+      li:nth-child(odd) {
+        /* odd 이니 홀수번째 요소들을 모두 선택 */
+        background-color: #aaaaaa44;
+      }
+      li:not(.tg) {
+        /* not(A) : A를 제외한 모든 요소를 선택. (예시는 클래스가 tg인 요소를 제외한 모든 요소를 선택) */
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>link, visited, hover, active</legend>
+      <div>
+        <a href="https://naver.com">네이버</a><br />
+        <a href="https://daum.net">다음</a>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>focus, before, after</legend>
+      <div class="field">
+        <label for="name">이름</label>
+        <input type="text" id="name" />
+      </div>
+      <div class="field">
+        <label for="age">나이</label>
+        <input type="number" id="age" />
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>nth-child</legend>
+      <ul>
+        <li class="tg">content1</li>
+        <li>content2</li>
+        <li>content3</li>
+        <li>content4</li>
+        <li>content5</li>
+      </ul>
+    </fieldset>
+  </body>
+</html>
