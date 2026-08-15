@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @media (max-width: 400px) {
+        body {
+          background-color: red;
+        }
+      }
+      @media (min-width: 401px) and (max-width: 600px) {
+        body {
+          background-color: green;
+        }
+      }
+      @media (min-width: 601px) {
+        body {
+          background-color: blue;
+        }
+      }
+      /* 위처럼 뷰포트 크기에 따라 다른 css를 적용하는 건 웹에서 필수 기능.
+         현재는 색으로만 바꿨지만, 뷰포트 크기에 따라, 분기별로, 배치 자체를 바꿈 */
+      /* F12 개발자 모드로 바꿔서, WIDTH PX을 바꿔서 확인해보자 */
+    </style>
+  </head>
+  <body>
+    <h1>제목</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quasi
+      optio asperiores esse rerum qui perspiciatis mollitia minus illum, nostrum
+      repudiandae, dolore impedit atque, excepturi iusto eaque pariatur ratione
+      harum. Labore vero minima voluptates molestias, porro optio nihil eius.
+      Inventore dolorem culpa quasi iure illum dolorum. Quibusdam blanditiis in,
+      voluptate maiores ad consequatur distinctio rem, nobis nam ducimus
+      architecto ipsam.
+    </p>
+  </body>
+</html>

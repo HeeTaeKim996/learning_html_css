@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation Loading</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .circle {
+        width: 20px;
+        height: 20px;
+        background-color: blue;
+        border-radius: 50%;
+        position: absolute;
+        animation: mov-circle 1s infinite;
+      }
+
+      @keyframes mov-circle {
+        0% {
+          transform: translate(0, 0) scale(1);
+        }
+        50% {
+          transform: translate(0, 50px) scale(0.5);
+        }
+        100% {
+          transform: translate(0, 0) scale(1);
+        }
+      }
+      .circle:nth-child(1) {
+        left: 30px;
+        animation-delay: 0.1s;
+      }
+      .circle:nth-child(2) {
+        left: 60px;
+        animation-delay: 0.2s;
+      }
+      .circle:nth-child(3) {
+        left: 90px;
+        animation-delay: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="animation-wrapper">
+      <div class="circle"></div>
+    </div>
+    <div class="animation-wrapper">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+  </body>
+</html>

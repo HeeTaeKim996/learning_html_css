@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .shape {
+        margin: 0 auto;
+        margin-top: 80px;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+      @keyframes animk1 {
+        from {
+          background-color: red;
+        }
+        to {
+          background-color: blue;
+        }
+      }
+      .anim1 {
+        animation-name: animk1;
+        animation-duration: 3s;
+        /* animk1 을 3초동안 재생 */
+      }
+      @keyframes animk2 {
+        0% {
+          background-color: red;
+        }
+        50% {
+          background-color: blue;
+        }
+        100% {
+          background-color: green;
+        }
+      }
+      .anim2 {
+        animation-name: animk2;
+        animation-duration: 3s;
+        animation-iteration-count: 3;
+        /* animk2를 3초동안 재생하고 3번 반복 */
+      }
+      @keyframes animk3 {
+        0% {
+          border-radius: 0%;
+        }
+        50% {
+          border-radius: 50%;
+        }
+        100% {
+          border-radius: 0%;
+        }
+      }
+      .anim3 {
+        animation: animk3 2s infinite;
+        /* (1) : animk3를, (2) : 2초동안, (3) : 무한 반복 */
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="shape anim1"></div>
+      <div class="shape anim2"></div>
+      <div class="shape anim3"></div>
+    </main>
+  </body>
+</html>

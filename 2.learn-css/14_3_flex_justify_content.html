@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 사전작업 */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        background-color: green;
+        width: 200px;
+        height: 200px;
+        margin-bottom: 30px;
+      }
+      .flex-item {
+        color: white;
+        width: 40px;
+        height: 40px;
+        background-color: purple;
+        text-align: center;
+        border: 1px solid yellow;
+      }
+      /* */
+      .flex {
+        display: flex;
+      }
+      .start {
+        /* justify-content 의 디펄트는 flex-start */
+      }
+      .end {
+        justify-content: flex-end;
+      }
+      .center {
+        justify-content: center;
+      }
+      .space_around {
+        justify-content: space-around;
+      }
+      .space_between {
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container flex start">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+    <div class="container flex end">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+    <div class="container flex center">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+    <div class="container flex space_around">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+    <div class="container flex space_between">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+  </body>
+</html>

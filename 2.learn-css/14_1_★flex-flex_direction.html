@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 사전작업 */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .flex-container {
+        background-color: green;
+        width: 200px;
+        height: 200px;
+        margin-bottom: 30px;
+      }
+      .flex-item {
+        color: white;
+        width: 40px;
+        height: 40px;
+        background-color: purple;
+        text-align: center;
+        border: 1px solid yellow;
+      }
+
+      /* display : flex */
+      .flex-container {
+        display: flex;
+      }
+      .flex-row {
+        /* flex-direction 디펄트는 row */
+      }
+      .flex-col {
+        flex-direction: column;
+      }
+      .flex-reverse-row {
+        flex-direction: row-reverse;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container flex-row">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+    <div class="flex-container flex-col">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+    <div class="flex-container flex-reverse-row">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+  </body>
+</html>
