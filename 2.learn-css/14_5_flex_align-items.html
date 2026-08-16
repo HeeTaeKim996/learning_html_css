@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 기본 세팅 */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        background-color: green;
+        width: 200px;
+        height: 200px;
+        margin-bottom: 30px;
+      }
+      .flex-item {
+        color: white;
+        width: 80px;
+        /* height: 40px; */ /* 아래 align-items와 연계 용도로 미정의 */
+        background-color: purple;
+        text-align: center;
+        border: 1px solid yellow;
+      }
+      /* alignt-items : alignt-content와 유사하나, 줄간격이 띄어져 나옴  */
+      .flex {
+        display: flex;
+        flex-flow: row wrap;
+      }
+      .stretch {
+        /* align-items 디펄트 : stretch */
+      }
+      .start {
+        align-items: start; /* wrap_content로 높이 지정인듯? */
+      }
+      .height {
+        height: 40px;
+      }
+      .start {
+        align-items: flex-start;
+      }
+      .center {
+        align-items: center;
+      }
+      .end {
+        align-items: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container flex stretch">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+    <div class="container flex start">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+    <div class="container flex start">
+      <div class="flex-item height">1</div>
+      <div class="flex-item height">2</div>
+      <div class="flex-item height">3</div>
+    </div>
+    <div class="container flex center">
+      <div class="flex-item height">1</div>
+      <div class="flex-item height">2</div>
+      <div class="flex-item height">3</div>
+    </div>
+    <div class="container flex end">
+      <div class="flex-item height">1</div>
+      <div class="flex-item height">2</div>
+      <div class="flex-item height">3</div>
+    </div>
+  </body>
+</html>
