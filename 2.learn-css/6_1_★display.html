@@ -9,12 +9,14 @@
       h2 {
         border: 1px solid black;
         height: 50px;
+        /* div, h2 : (display : block) 의 대표적 예시 */
         /* 블록은 width, height를 수동 할당 가능. 세로로 배치됨 */
       }
 
       span,
       a {
         border: 1px dashed blue;
+        /* span, a : (display : inline) 의 대표적 예시 */
         /* 인라인은 width, height 수동 할당 불가능. 가로로 배치됨 */
       }
       .disp_non {
@@ -36,10 +38,8 @@
     </style>
   </head>
   <body>
-    <!--Block 태그 : display, h 가 대표적 (match_parent와 유사)-->
     <div>This is Div</div>
     <h2>This is H2</h2>
-    <!--Inline 태그 : span, a 가 대표적 -->
     <span>This is Span</span><br />
     <a href="#">This is a</a>
     <!-- display : none 테스트-->

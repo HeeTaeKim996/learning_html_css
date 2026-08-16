@@ -8,16 +8,16 @@
       h2[class] {
         color: red;
       }
-      /* a[target] : a 속성 중 target 이 있는 속성 (아래 구글) */
+      /* a[B] : a 태그 중 B 속성 전체 선택 (아래 구글 이 B == target 으로 선택됨) */
       a[target] {
         color: green;
       }
-      /* = : 속성 값과 일치하는 요소 */
+      /* [A='b'] : 속성 A 중 b 값과 일치하는 요소만 선택 */
       a[class='naver-a'] {
         color: yellow;
       }
-      /* *= :  속성 값을 포함하는 요소 ※ 띄어쓰기 기준으로만 일치하는지 묻는 경우,
-                                       ~= 으로 검색*/
+      /* *= :  속성 값을 포함하는 요소 
+      ※ 띄어쓰기 기준으로만 일치하는지 묻는 경우, ~= 으로 검색*/
       a[href*='net'] {
         color: brown;
       }

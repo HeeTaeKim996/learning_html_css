@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .bg {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+      }
+      .b1 {
+        background-color: red;
+      }
+      .b2 {
+        background-color: #00ff00;
+      }
+      .img {
+        background-image: url('/assets/images/background.jpg');
+        width: 300px;
+        height: 300px;
+        margin-bottom: 10px;
+        border: 1px solid black;
+      }
+      .im1 {
+        /* 위 background.jpg 는 수동으로 가로 크기를 100px로 바꿨었다. 
+           해당 이미지를 width : 300px로 할시, 100px 이 3번 반복된다. */
+      }
+      .im2 {
+        background-repeat: no-repeat;
+        /* no-repeat 일시, 반복 안함 */
+        background-position: center;
+        /* position 설정 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg b1"></div>
+    <div class="bg b2"></div>
+    <div class="img im1"></div>
+    <div class="img im2"></div>
+  </body>
+</html>

@@ -28,7 +28,7 @@
         /* - attr(..) 로 ..속성의 내용을 가져온다. */
       }
       [dt2] {
-        position: relative;
+        position: relative; /* relative 로 바꿔야 아래 hover::after 로 생성된 요소가 absolute로 여길 잡음 */
         font-size: 20px;
       }
       [dt2]:hover::after {

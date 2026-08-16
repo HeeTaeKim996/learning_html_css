@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .scr {
+        width: 200px;
+        height: 400px;
+        border: 1px solid black;
+        display: inline-block;
+      }
+      .sc1 {
+        /* 오버플로시 아무 조치도 안했기에, 아래로 튀어나옴 */
+      }
+      .sc2 {
+        overflow: hidden;
+        /* 오버플로시 hidden으로, 넘친 부분이 보이지 않음 */
+      }
+      .sc3 {
+        overflow: scroll;
+        /* 오버플로시 스크롤로 위아래를 이동해서 봄 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scr sc1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quaerat
+      natus, provident deserunt deleniti expedita, harum eligendi eaque nostrum
+      odit unde, modi voluptatem laborum molestias velit explicabo ullam a
+      voluptatum! Accusamus illo ab, quisquam rerum ea mollitia odit aspernatur
+      omnis, praesentium distinctio adipisci! Ab amet, quam nostrum accusantium
+      maxime aliquam provident omnis ad tempora non? Inventore doloremque
+      voluptatum expedita. Ipsam. Quis sint optio provident vitae voluptatibus
+      unde consequuntur nostrum sed autem. Doloremque rem, dolor sit quas
+      blanditiis maxime et ut aspernatur sed. Amet eligendi totam fugit rem
+      numquam voluptatem itaque. Vitae eius tempore a. Facilis accusantium
+    </div>
+    <div class="scr sc2">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quaerat
+      natus, provident deserunt deleniti expedita, harum eligendi eaque nostrum
+      odit unde, modi voluptatem laborum molestias velit explicabo ullam a
+      voluptatum! Accusamus illo ab, quisquam rerum ea mollitia odit aspernatur
+      omnis, praesentium distinctio adipisci! Ab amet, quam nostrum accusantium
+      maxime aliquam provident omnis ad tempora non? Inventore doloremque
+      voluptatum expedita. Ipsam. Quis sint optio provident vitae voluptatibus
+      unde consequuntur nostrum sed autem. Doloremque rem, dolor sit quas
+      blanditiis maxime et ut aspernatur sed. Amet eligendi totam fugit rem
+      numquam voluptatem itaque. Vitae eius tempore a. Facilis accusantium
+    </div>
+    <div class="scr sc3">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quaerat
+      natus, provident deserunt deleniti expedita, harum eligendi eaque nostrum
+      odit unde, modi voluptatem laborum molestias velit explicabo ullam a
+      voluptatum! Accusamus illo ab, quisquam rerum ea mollitia odit aspernatur
+      omnis, praesentium distinctio adipisci! Ab amet, quam nostrum accusantium
+      maxime aliquam provident omnis ad tempora non? Inventore doloremque
+      voluptatum expedita. Ipsam. Quis sint optio provident vitae voluptatibus
+      unde consequuntur nostrum sed autem. Doloremque rem, dolor sit quas
+      blanditiis maxime et ut aspernatur sed. Amet eligendi totam fugit rem
+      numquam voluptatem itaque. Vitae eius tempore a. Facilis accusantium
+    </div>
+  </body>
+</html>

@@ -28,16 +28,6 @@
       .flex {
         display: flex;
       }
-      /* order 로 순서를 수동 지정 (자주 사용은 안함) */
-      .order > .item1 {
-        order: 2;
-      }
-      .order > .item2 {
-        order: 0;
-      }
-      .order > .item3 {
-        order: 1;
-      }
       /* width : 0dp; android_weight : n 그거랑 같음
          ※ flex-grow 의 기본값은 0 (여백을 차지하지 않음) */
       .grow > .item1 {
@@ -52,16 +42,16 @@
       /* shrink : grow 가 남은 여백을 얼마만큼의 비율로 가져올것인가인 반면, flex-shrink 는 공간이 축소될 때
                   얼마만큼의 비율로 축소될거냐 에 대한.
          ※ flex-shrink의 기본값은 1. 만약 0으로 할시, width가 축소돼도 아이템은 축소되지 않음 */
-      .grow-shrink > .item1 {
-        flex-grow: 1;
+      .shrink > .item1 {
+        width: 60px;
         flex-shrink: 1;
       }
-      .grow-shrink > .item2 {
-        flex-grow: 1;
+      .shrink > .item2 {
+        width: 60px;
         flex-shrink: 3;
       }
-      .grow-shrink > .item3 {
-        flex-grow: 1;
+      .shrink > .item3 {
+        width: 60px;
         flex-shrink: 1;
       }
       /* flex-basis : 넓이 지정. 기본값은 auto */
@@ -84,20 +74,10 @@
       .fflex > .item3 {
         flex: 1 1 25%;
       }
-      /* align-self : 앞선 컨테이너에서의 align-items 내용을 개별 요소 하나 하나로 지정 */
-      .self > .item1 {
-        align-self: flex-end;
-      }
-      .self > .item2 {
-        align-self: center;
-      }
-      .self > .item3 {
-        align-self: flex-start;
-      }
     </style>
   </head>
   <body>
-    <div class="container flex order">
+    <div class="container flex none">
       <div class="flex-item item1">1</div>
       <div class="flex-item item2">2</div>
       <div class="flex-item item3">3</div>
@@ -107,25 +87,17 @@
       <div class="flex-item item2">2</div>
       <div class="flex-item item3">3</div>
     </div>
-    <div class="container flex grow-shrink">
+    <div class="container flex shrink">
       <div class="flex-item item1">1</div>
       <div class="flex-item item2">2</div>
       <div class="flex-item item3">3</div>
     </div>
-    <hr />
-    <h2>구분자</h2>
-    <hr />
     <div class="container flex basis">
       <div class="flex-item item1">1</div>
       <div class="flex-item item2">2</div>
       <div class="flex-item item3">3</div>
     </div>
     <div class="container flex fflex">
-      <div class="flex-item item1">1</div>
-      <div class="flex-item item2">2</div>
-      <div class="flex-item item3">3</div>
-    </div>
-    <div class="container flex self">
       <div class="flex-item item1">1</div>
       <div class="flex-item item2">2</div>
       <div class="flex-item item3">3</div>
