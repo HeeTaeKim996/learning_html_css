@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: chartreuse;
+        border: 1px solid darkslategray;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>이미지 태그</h2>
+    <!-- 상대 경로로 지정-->
+    <img width="200" src="../assets/images/stars.jpg" alt="별이미지" />
+    <img height="120" src="../assets/images/stars.jpg" alt="별이미지" />
+
+    <!-- 루트 경로(절대경로)로 지정-->
+    <img width="200" src="/assets/images/stars.jpg" alt="별이미지" />
+
+    <h2>오디오 태그</h2>
+    <audio src="/assets/sampleMp3.mp3.mp3" controls></audio>
+
+    <h2>비디오 태그</h2>
+    <video
+      width="400"
+      src="/assets/sampleMp4.mp4.mp4"
+      controls
+      type="video/mp4"
+      poster="/assets/images/stars.jpg"
+    ></video>
+  </body>
+</html>
