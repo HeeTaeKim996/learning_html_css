@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="1_selector.js" defer></script>
+    <style>
+      .red {
+        color: red;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h2 id="this_h2">타이틀</h2>
+      <form name="myForm">
+        <input type="text" name="myText" />
+        <button>추가</button>
+      </form>
+      <ul class="list">
+        <li class="item">아이템1</li>
+        <li class="item">아이템2</li>
+        <li class="item">아이템3</li>
+      </ul>
+      <p class="this_p">p입니다</p>
+      <p id="p_2">p2입니다. 저는 원래 일반 텍스트였습니다</p>
+      <p id="p_3" class="red">p3입니다. 저는 원래 빨갰습니다</p>
+    </section>
+  </body>
+</html>
