@@ -28,12 +28,12 @@ let obj = {
   prop1: 30,
 
   // A: function(..){..} : 객체 내 함수 선언
-  objFunc: function (num) {
+  objFunc(num) {
     console.log("This is from obj's objFunc [%d]", this.prop1 + num); // 객체 내 변수 참조시, 반드시 this를 붙여야 한다
   },
 
-  objFunc2: function (num) {
-    alert("this is from obj's objFunc2 [${this.prop1 + num}]");
+  objFunc2(num) {
+    alert("this is from obj's objFunc2 [${this.prop1} + ${num}]");
   },
 };
 
