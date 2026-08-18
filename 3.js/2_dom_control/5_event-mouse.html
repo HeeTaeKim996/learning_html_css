@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="5_event-mouse.js" defer></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .rect {
+        border: 1px solid black;
+        width: 300px;
+        height: 150px;
+        background-color: green;
+      }
+      .circle {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        position: absolute;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="width: 100px; height: 700px; background-color: gray">
+      height : forScroll
+    </div>
+    <br />
+    <p id="clientPos">client :</p>
+    <p id="pagePos">page :</p>
+    <div class="rect" id="rec1"></div>
+    <div class="circle"></div>
+  </body>
+</html>
