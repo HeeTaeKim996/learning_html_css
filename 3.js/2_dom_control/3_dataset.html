@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="3_dataset.js" defer></script>
+  </head>
+  <body>
+    <p data-example="data.example의 예시 컨텐츠입니다">dataExample텍스트</p>
+    <!-- data-.. : data- 양식을 쓰면, html에서 해당 내용을 관여 안하고 무시함.
+                   유저가 data-~ 양식으로 변수 지정 및 내용을 할당할 수 있음-->
+    <ul>
+      <li data-image="/assets/images/star_circle.jpg">
+        star_circle
+        <button class="pickImg">O</button>
+      </li>
+      <li data-image="/assets/images/stars.jpg">
+        stars
+        <button class="pickImg">O</button>
+      </li>
+      <li data-image="/assets/images/sky_road.jpg">
+        sky_road
+        <button class="pickImg">O</button>
+      </li>
+    </ul>
+    <img id="dImage" style="width: 200" src="" alt="이미지" />
+  </body>
+</html>
